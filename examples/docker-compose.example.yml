@@ -1,0 +1,8 @@
+services:
+  hermes:
+    image: nousresearch/hermes-agent:latest
+    restart: unless-stopped
+    volumes:
+      - ./data:/opt/data     # config, .env, skills, scripts, perfis e logs
+    ports:
+      - "127.0.0.1:8642:8642"  # API do agente só na máquina local

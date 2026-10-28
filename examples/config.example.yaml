@@ -1,0 +1,18 @@
+# Trechos de configuração do Hermes Agent (não é um arquivo completo)
+timezone: America/Sao_Paulo
+
+model:
+  provider: openai-codex
+  name: <modelo-principal>
+  reasoning: medium
+fallback:
+  provider: opencode-go
+  name: deepseek-v4-flash
+
+mcp_servers:
+  mcp-erp:
+    url: https://<erp>/mcp
+    auth: oauth           # escopo somente leitura
+    tools:
+      exclude:
+        - execute_sql     # ferramenta de escrita removida da configuração
