@@ -25,7 +25,7 @@ import uvicorn
 KEY = os.environ["API_SERVER_KEY"]
 PORT = int(os.environ.get("CLAUDE_BRIDGE_PORT", "8765"))
 API = "http://127.0.0.1:8642/v1/chat/completions"
-HOST = os.environ["BRIDGE_PUBLIC_HOST"]  # ex.: seu-dominio.ngrok-free.dev
+HOST = os.environ["BRIDGE_PUBLIC_HOST"]  # ex.: agente.exemplo.com
 LOG = os.environ.get("BRIDGE_LOG", "/opt/data/logs/mcp_bridge_access.log")
 
 ANTHROPIC = [ipaddress.ip_network("160.79.104.0/21"), ipaddress.ip_network("2607:6bc0::/48")]
